@@ -214,7 +214,7 @@ char *readFile()
         return "\nCant open file\n";
     }
 
-    fseek(file, 0, SEEK_END);
+    fseek(file, 0, SEEK_END);   //https://stackoverflow.com/questions/3463426/in-c-how-should-i-read-a-text-file-and-print-all-strings
     length = ftell(file);
     rewind(file);
     string = malloc(sizeof(char) * (length + 1));
